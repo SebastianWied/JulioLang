@@ -1,0 +1,63 @@
+one way node:
+    
+class OneWayNode {
+    Julio makes OneWayNode(value, nextNode) {
+        make OneWayNode me.next = nextNode;
+        make decimal me.value = value;
+    }
+
+    Julio wants OneWayNode getNext() {
+        julio gets me.next;
+    }
+
+    Julio wants bool checkLinked() {
+        is (me.next == none) fr {
+            julio gets nah;
+        }
+        julio gets ye;
+    }
+
+    Julio wants None setNext(nextNode) {
+        change me.next to nextNode;
+    }
+
+    Julio wants int getValue() {
+        julio gets me.value;
+    }
+}
+
+class Queue {
+    init() {
+        make me.head = None;
+        make me.last = None;
+        make me.size = 0;
+    }
+
+    julio wants None enqueue(value) {
+        make OneWayNode node = new OneWayNode(value);
+        if (me.head) aint fr {
+            change me.head to node;
+            change me.last to node;
+            change me.size to me.size + 1;
+        }
+        otherwise {
+            me.last.setNextNode(node);
+            change me.last to node;
+            change me.size to me.size + 1
+        }
+    }
+
+    julio wants int dequeue() {
+        is (me.size == 0) fr {
+            julio gets None
+        }
+        make OneWayNode toDequeue = me.head;
+        make OneWayNode newHead = toDequeue.getNextNode();
+        change me.head to newHead;
+        make int dequeuedValue = toDequeue.getValue();
+        change me.size to me.size - 1;
+        julio gets dequeuedValue;
+    }
+
+
+}

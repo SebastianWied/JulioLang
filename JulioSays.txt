@@ -6,9 +6,15 @@ Var Declaration     |       Make This
 Func Declaration    |       Julio Wants
 Print               |       Julio Says
 Conditional         |       is (condition) fr?
+Else                |       otherwise
 Array               |       Make Harem 
 While loop          |       till (condition) ain't fr?
 For loop            |       
-File Read           |       Julio 
-File Write          |       Julio
-Bools               |       Ye / Nah 
+File Read           |       Can julio read 
+File Write          |       Can julio write
+Bools               |       Yuh / Nah 
+None                |       
+Not                 |       Aint
+constructor         |       new CLASSNAME
+
+Name: JANG
