@@ -1,0 +1,6 @@
+
+Things that need to be dones are:
+
+    ☐ Parser 
+    ☐ Lexer
+    ☐ Interpreter

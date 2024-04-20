@@ -1,0 +1,14 @@
+KEYWORD             |        Code
+================================================
+Return              |       Julio Gets
+Input               |       Julio Asks
+Var Declaration     |       Make This
+Func Declaration    |       Julio Wants
+Print               |       Julio Says
+Conditional         |       is (condition) fr?
+Array               |       Make Harem 
+While loop          |       till (condition) ain't fr?
+For loop            |       
+File Read           |       Julio 
+File Write          |       Julio
+Bools               |       Ye / Nah 

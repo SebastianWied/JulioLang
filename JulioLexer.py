@@ -7,7 +7,7 @@ import re
 
 # tokens
 TOKENS = {
-    'STRING_LITERAL': r'".*?"',
+    'STRING_LITERAL': r'"[^"]*"',
     'CHAR_LITERAL': r"'.*?'",
     'FLOAT_LITERAL': r'\d+\.\d+',
     'INT_LITERAL': r'\d+',
@@ -15,7 +15,7 @@ TOKENS = {
     'NONE_LITERAL': r'None',
     'KEYWORD': r'Julio Says|Julio Wants|Julio Lets|Julio Gets|Julio Opens|Julio Writes|Julio Asks|is|fr\?',
     'TYPE': r'Int|Float|None|Char|String|Bool',
-    'OPERATOR': r'\+|-|\*|/|==|!=| < | > | <= | >= | % | ! | =',
+    'OPERATOR': r'\+|-|\*|/|==|!=|<|>|<=|>=|%|!|=',
     'LPAREN': r'\(',
     'RPAREN': r'\)',
     'LBRACE': r'\{',
@@ -50,6 +50,8 @@ class JulioLexer:
         self.compile_tk = {tok: re.compile(regex) for tok, regex in TOKENS.items()}
 
     def tokenize(self, text, line_number=1):
+        self.tokens = []  # reset the list of tokens
+        self.pos = 0  # reset the position
 
         while (self.pos < len(text)):
             match = None
@@ -72,13 +74,8 @@ class JulioLexer:
             if not match:
                 raise RuntimeError(f'Could not match any token at position {self.pos}')
         return self.tokens
-    
+
     def __repr__(self):
         return f'{self.tokens}'
-    
-lexer = JulioLexer()
-lexer.tokenize('Julio Wants String: Print(String message){}')
-print(lexer)
 
-        
         

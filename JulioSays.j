@@ -16,9 +16,6 @@ Julio Wants None: main()
     Julio Lets Int b = 4;
 
     Julio Lets Int c = Multiply(a, b);
-
-    is (IsNumEven(c)) fr?
-        Julio Says "c is an even number";
     
     Julio Says "Programs Ends Here";
 
